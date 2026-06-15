@@ -121,25 +121,47 @@
         </div>
     </section>
     <!-- prefect section -->
-     <section class="prefect">
+    <section class="prefect">
         <div class="container">
             <h2>humbawe institude</h2>
-            <p>udoor naftaada goobta ugu haboon uguna xasiloon ee aad ku barran karto<br>xirfada maanta loogu baahiyaha badan yahay casrigaan</p>
+            <p>udoor naftaada goobta ugu haboon uguna xasiloon ee aad ku barran karto<br>xirfada maanta loogu baahiyaha
+                badan yahay casrigaan</p>
         </div>
-     </section>
-     
-     <section class="con">
+    </section>
+
+    <section class="con">
         <div class="container item">
             <h2>hadaba hadii aad diyaar u tahay dhamaan xirfadahaas soo raac linkiga hoose</h2>
             <button class="btn">join with us</button>
         </div>
-     </section>
-     <footer>
+    </section>
+    <footer>
         <div class="container">
             <p>&copy;copy right:our books not for sale</p>
         </div>
-     </footer>
+    </footer>
+    <script>
+        const hamburger = document.querySelector('.hamburger');
+        const mobileMenu = document.querySelector(".mobile-menu");
+        const icons = document.querySelectorAll("i");
 
+        hamburger.addEventListener("click", function (event) {
+            const isVisible = mobileMenu.getAttribute('data-visible');
+            if (isVisible == "true") {
+                // qari hiding
+                mobileMenu.setAttribute('data-visible', "false");
+                icons[0].setAttribute('data-visible', "true");
+                icons[1].setAttribute('data-visible', "false");
+            } else if (isVisible == "false") {
+                // soo bandhig showing
+                mobileMenu.setAttribute('data-visible', "true");
+                icons[0].setAttribute('data-visible', "false");
+                icons[1].setAttribute('data-visible', "true");
+            }
+        });
+
+
+    </script>
 
 </body>
 
